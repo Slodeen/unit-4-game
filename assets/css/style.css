@@ -1,0 +1,59 @@
+.container{
+    margin-left: 0%;
+    float: left;
+    size: 100%;
+    padding: 2%;
+    background-image: url(../images/background.png)
+    
+}
+
+.col-4.chrystal{
+    
+size: 10%;
+background-color: red;
+
+}
+
+h3{
+color: white;
+background-color: coral;
+padding: 3%;
+
+}
+
+p{
+color: #549f64;
+background-color: #fbe6cf; 
+}
+
+#num{
+padding: 10%;
+background-color: #53c985;
+height: 180px;
+font-size: 18;
+
+}
+
+
+#win{
+padding: 10%;
+background-color:#3afefd;
+height: 90px; 
+
+}
+
+#loss{
+    padding: 10%;
+    background-color:#3afefd;
+    height: 90px; 
+    
+    }
+#total{
+    background-color: #1fa397;
+}
+
+#score{
+    background-color: #1fa397;
+    height: 150px;
+}
+    
