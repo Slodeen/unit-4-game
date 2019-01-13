@@ -20,31 +20,41 @@ $("#loss").html(loss);
 
 //reseting the game 
 function reset(){
-var comPick = Math.floor(Math.random() * 30);
+var comPick = Math.floor(Math.random() * 100) +20;
 crystal1 = Math.floor(Math.random() * 30);
 crystal2 = Math.floor(Math.random() * 30);
 crystal3 = Math.floor(Math.random() * 30);
 crystal4 = Math.floor(Math.random() * 30);
-var userScore = 0;
+userScore++
 
 $("#score").html(userScore);
+
 }
+
 
 //adding win and loss
 
 function win(){
     alert("You win!");
     wins++
-    $("#win").html(wins);
+    $("#win").html("your total win: " + wins);
+    userScore = 0;
+    comPick = Math.floor(Math.random() * 100) +20;
+    $("#num").html(comPick);
     reset();
 }
+
 
 function lost(){
     alert("You lost!");
     loss++
-    $("#loss").html(loss);
+    $("#loss").html("your total loss: "+  loss);
+    userScore = 0;
+    comPick = Math.floor(Math.random() * 100) +20;
+    $("#num").html(comPick);
     reset();
 }
+
 
 //assigning crystals
 $("#crystal1").on('click', function(){
@@ -56,6 +66,8 @@ $("#crystal1").on('click', function(){
         win();
     } else if(userScore > comPick){
         lost();
+
+        reset();
     }});
 
 $("#crystal2").on('click', function(){
@@ -67,6 +79,7 @@ $("#crystal2").on('click', function(){
         win();
     } else if(userScore > comPick){
         lost();
+        reset();
     }});
 
 $("#crystal3").on('click', function(){
@@ -78,6 +91,7 @@ $("#crystal3").on('click', function(){
         win();
     } else if(userScore > comPick){
         lost();
+        reset();
     }});
 
     $("#crystal4").on('click', function(){
@@ -91,4 +105,4 @@ $("#crystal3").on('click', function(){
         lost();
     }});
 
-    
+    reset();
